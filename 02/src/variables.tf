@@ -6,11 +6,13 @@ variable "token" {
 
 variable "cloud_id" {
   type        = string
+  default     = "b1gmi2po52jgrkojesr0"
   description = "https://cloud.yandex.ru/docs/resource-manager/operations/cloud/get-id"
 }
 
 variable "folder_id" {
   type        = string
+  default     = "b1gbprt1137p9ib1uet2"
   description = "https://cloud.yandex.ru/docs/resource-manager/operations/folder/get-id"
 }
 
@@ -36,6 +38,12 @@ variable "vpc_name" {
 
 variable "vms_ssh_root_key" {
   type        = string
-  default     = "<your_ssh_ed25519_key>"
+  default     = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMjzFHXkyRoc9c2A2UNHDrS8Sp5PM8oI32gRORhoWiqA nikit@nikit-VirtualBox"
   description = "ssh-keygen -t ed25519"
+}
+
+variable "vms_ssh_public_root_key" {
+  type = string
+  default = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMjzFHXkyRoc9c2A2UNHDrS8Sp5PM8oI32gRORhoWiqA nikit@nikit-VirtualBox"
+  description = "ssh public key"
 }
